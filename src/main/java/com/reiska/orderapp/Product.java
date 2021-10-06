@@ -1,10 +1,15 @@
 package com.reiska.orderapp;
 
+
 public class Product {
+
     private long id;
     private String name;
-
     private static long idCounter = 0;
+
+    public Product(){
+        this("");
+    }
 
     public Product(String name) {
         this.id = idCounter++;
@@ -13,10 +18,6 @@ public class Product {
 
     public long getId() {
         return this.id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {
